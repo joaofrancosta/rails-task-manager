@@ -1,0 +1,15 @@
+<h1>My tasks:</h1>
+
+<table>
+
+  <% @tasks.each do |task|  %>
+
+  <tr>
+    <td><%= link_to task.title, task_path(task.id) %></td>
+
+  </tr>
+
+  <% end %>
+
+</table>
+<%= link_to 'Add new task', new_task_path %>
